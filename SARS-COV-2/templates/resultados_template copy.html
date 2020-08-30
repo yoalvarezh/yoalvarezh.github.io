@@ -35,53 +35,51 @@
       <div id="content_header">
     </div>
 
-    <div id="site_content">
-      <div id="content">
+    <nav style="border:1px solid #BEBDBD; border-width:2px;">
+      <a>Region:</a>
+      <select id="region" name="region"  onchange="selectPlot()">
+        
+        <!--- Genera las opciones del menu usando Jinja2 --->
 
-        
-            <div>
-              <h1>Bogotá</h1>
-            </div>
-            <div class="myImage" id="Bogotá" style="display:block"> <img src="figs/Bogotá.png" alt="Bogotá"> </div>
-            <br>
-            <br>
-            <br>
-        
-            <div>
-              <h1>Medellín</h1>
-            </div>
-            <div class="myImage" id="Medellín" style="display:block"> <img src="figs/Medellín.png" alt="Medellín"> </div>
-            <br>
-            <br>
-            <br>
-        
-            <div>
-              <h1>Cali</h1>
-            </div>
-            <div class="myImage" id="Cali" style="display:block"> <img src="figs/Cali.png" alt="Cali"> </div>
-            <br>
-            <br>
-            <br>
-        
-            <div>
-              <h1>Barranquilla</h1>
-            </div>
-            <div class="myImage" id="Barranquilla" style="display:block"> <img src="figs/Barranquilla.png" alt="Barranquilla"> </div>
-            <br>
-            <br>
-            <br>
-        
-            <div>
-              <h1>Cartagena</h1>
-            </div>
-            <div class="myImage" id="Cartagena" style="display:block"> <img src="figs/Cartagena.png" alt="Cartagena"> </div>
-            <br>
-            <br>
-            <br>
-        
+        {% for i in regions %}
+            <option value="{{ i }}">{{ i }}</option>
+        {% endfor %}
 
-      </div>
+        <!--- Fin de la modificacion --->
+
+      </select>
+      <br>
+      <hr>
+    </nav>
+
+    <div>
+      <!--- Genera la division de cada imagen usando Jinja2 --->
+
+      {% for i in regions %}
+        {% if i == regions[0] %}
+          <div class="myImage" id="{{ i }}" style="display:block"> <img src="figs/{{ i }}.png" alt="{{ i }}"> </div>
+        {% else %}
+          <div class="myImage" id="{{ i }}" style="display:none"> <img src="figs/{{ i }}.png" alt="{{ i }}"> </div>
+        {% endif %}
+      {% endfor %}
+
+      <!--- Fin de la modificacion --->
+
     </div>
+
+    <script>
+      function selectPlot() {
+        var region = document.getElementById("region").value;
+        var images = document.getElementsByClassName("myImage");
+        for (var i = 0; i < images.length; i++) {
+          if (images[i].id == region) {
+            images[i].style.display = "block"
+          }else{
+            images[i].style.display = "none"
+          }
+        }
+      }
+    </script>
 
   </body>
 </html>

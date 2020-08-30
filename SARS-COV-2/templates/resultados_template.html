@@ -35,51 +35,21 @@
       <div id="content_header">
     </div>
 
-    <nav style="border:1px solid #BEBDBD; border-width:2px;">
-      <a>Region:</a>
-      <select id="region" name="region"  onchange="selectPlot()">
-        
-        <!--- Genera las opciones del menu usando Jinja2 --->
+    <div id="site_content">
+      <div id="content">
 
         {% for i in regions %}
-            <option value="{{ i }}">{{ i }}</option>
+            <div>
+              <h1>{{ i }}</h1>
+            </div>
+            <div class="myImage" id="{{ i }}" style="display:block"> <img src="figs/{{ i }}.png" alt="{{ i }}"> </div>
+            <br>
+            <br>
+            <br>
         {% endfor %}
 
-        <!--- Fin de la modificacion --->
-
-      </select>
-      <br>
-      <hr>
-    </nav>
-
-    <div>
-      <!--- Genera la division de cada imagen usando Jinja2 --->
-
-      {% for i in regions %}
-        {% if i == regions[0] %}
-          <div class="myImage" id="{{ i }}" style="display:block"> <img src="figs/{{ i }}.png" alt="{{ i }}"> </div>
-        {% else %}
-          <div class="myImage" id="{{ i }}" style="display:none"> <img src="figs/{{ i }}.png" alt="{{ i }}"> </div>
-        {% endif %}
-      {% endfor %}
-
-      <!--- Fin de la modificacion --->
-
+      </div>
     </div>
-
-    <script>
-      function selectPlot() {
-        var region = document.getElementById("region").value;
-        var images = document.getElementsByClassName("myImage");
-        for (var i = 0; i < images.length; i++) {
-          if (images[i].id == region) {
-            images[i].style.display = "block"
-          }else{
-            images[i].style.display = "none"
-          }
-        }
-      }
-    </script>
 
   </body>
 </html>
