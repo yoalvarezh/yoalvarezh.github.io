@@ -12,7 +12,7 @@ data = [[45939, 21574, 2876, 1815, 1646],
 
 data = pd.DataFrame(
     data = data,
-    index = [1951, 1956, 1957, 1958, 1959],
+    index = [1951, 1956, 1957, 1958, 1959, 1960, 1961],
     columns = ['Bogotá', 'Medellín', 'Cali', 'Barranquilla', 'Cartagena']
 )
 
