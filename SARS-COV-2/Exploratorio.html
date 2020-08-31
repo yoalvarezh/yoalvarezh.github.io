@@ -13083,7 +13083,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">load_files</span>   
@@ -13131,7 +13131,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_DA</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;../Datos/CasosPositivosCOVID19_Colombia.csv&quot;</span><span class="p">)</span>
@@ -13148,7 +13148,7 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[2]:</div>
+    <div class="prompt output_prompt">Out[28]:</div>
 
 
 
@@ -13473,7 +13473,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">ciudades_ppales</span> <span class="o">=</span> <span class="n">data_DA</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">data_DA</span><span class="p">[</span><span class="s1">&#39;ciudad_de_ubicaci_n&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="s1">&#39;Medellín&#39;</span><span class="p">,</span><span class="s1">&#39;Bogotá D.C.&#39;</span><span class="p">,</span><span class="s1">&#39;Cali&#39;</span><span class="p">,</span><span class="s1">&#39;Barranquilla&#39;</span><span class="p">,</span><span class="s1">&#39;Cartagena de Indias&#39;</span><span class="p">])]</span>
@@ -13486,7 +13486,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">ciudades_ppales</span><span class="p">[</span><span class="s1">&#39;fecha_reporte_web&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">ciudades_ppales</span><span class="p">[</span><span class="s1">&#39;fecha_reporte_web&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">tz_localize</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span> 
@@ -13500,7 +13500,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_inicio</span> <span class="o">=</span> <span class="n">ciudades_ppales</span><span class="o">.</span><span class="n">groupby</span> <span class="p">([</span><span class="s1">&#39;fecha_reporte_web&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">id_de_caso</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
@@ -13523,7 +13523,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">bokeh.plotting</span> <span class="kn">import</span> <span class="n">figure</span><span class="p">,</span> <span class="n">output_file</span><span class="p">,</span> <span class="n">show</span>
@@ -13559,7 +13559,7 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[6]:</div>
+    <div class="prompt output_prompt">Out[32]:</div>
 
 
 
@@ -13598,7 +13598,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">casos_confirmados</span> <span class="o">=</span> <span class="n">data_DA</span><span class="p">[</span><span class="s1">&#39;id_de_caso&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
@@ -13637,7 +13637,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">count_gral</span> <span class="o">=</span> <span class="n">data_DA</span><span class="p">[[</span><span class="s1">&#39;id_de_caso&#39;</span><span class="p">,</span><span class="s1">&#39;atenci_n&#39;</span><span class="p">]]</span>
@@ -13672,7 +13672,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;El porcentaje de recuperados es del:&#39;</span><span class="p">,</span> <span class="n">count_rec</span><span class="o">/</span><span class="n">casos_confirmados</span><span class="o">*</span><span class="mi">100</span><span class="p">,</span><span class="s1">&#39;%&#39;</span><span class="p">)</span>
@@ -13710,7 +13710,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">count_fallecidos</span> <span class="o">=</span> <span class="n">count_gral</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">count_gral</span><span class="p">[</span><span class="s1">&#39;atenci_n&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Fallecido&#39;</span><span class="p">]</span>
@@ -13744,7 +13744,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;El porcentaje de fallecidos es del:&#39;</span><span class="p">,</span> <span class="n">count_fallecidos</span><span class="o">/</span><span class="n">casos_confirmados</span><span class="o">*</span><span class="mi">100</span><span class="p">,</span><span class="s1">&#39;%&#39;</span><span class="p">)</span>
@@ -13782,7 +13782,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">conteo</span> <span class="o">=</span> <span class="n">data_DA</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;atenci_n&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
@@ -13799,7 +13799,7 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[12]:</div>
+    <div class="prompt output_prompt">Out[38]:</div>
 
 
 
@@ -14004,7 +14004,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">conteo_estado</span> <span class="o">=</span> <span class="n">conteo</span><span class="p">[</span><span class="s1">&#39;Unnamed: 0&#39;</span><span class="p">]</span>
@@ -14018,7 +14018,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">conteo_estado</span> <span class="o">=</span> <span class="n">conteo_estado</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;Unnamed: 0&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
@@ -14035,7 +14035,7 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[14]:</div>
+    <div class="prompt output_prompt">Out[40]:</div>
 
 
 
@@ -14115,7 +14115,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[41]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">agr_ciudad</span> <span class="o">=</span> <span class="n">ciudades_ppales</span><span class="o">.</span><span class="n">groupby</span> <span class="p">([</span><span class="s1">&#39;ciudad_de_ubicaci_n&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">id_de_caso</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
@@ -14130,7 +14130,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[42]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">agr_ciudad</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Cantidad&#39;</span><span class="p">]</span>
@@ -14143,7 +14143,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">agr_ciudad</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s2">&quot;Cantidad&quot;</span><span class="p">,</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">ascending</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> 
@@ -14161,7 +14161,7 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[17]:</div>
+    <div class="prompt output_prompt">Out[43]:</div>
 
 
 
@@ -14225,7 +14225,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[44]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">y_label</span> <span class="o">=</span> <span class="n">agr_ciudad</span><span class="p">[[</span><span class="s1">&#39;Cantidad&#39;</span><span class="p">]]</span>
@@ -14289,7 +14289,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[45]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">ax</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">distplot</span><span class="p">(</span><span class="n">data_DA</span><span class="p">[</span><span class="s1">&#39;edad&#39;</span><span class="p">])</span>
@@ -14310,7 +14310,7 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[19]:</div>
+    <div class="prompt output_prompt">Out[45]:</div>
 
 
 
@@ -14357,7 +14357,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[46]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">fallecidos_edad</span> <span class="o">=</span> <span class="n">data_DA</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">data_DA</span><span class="p">[</span><span class="s1">&#39;atenci_n&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="s1">&#39;Fallecido&#39;</span><span class="p">])]</span> 
@@ -14370,7 +14370,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[47]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">ax</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">distplot</span><span class="p">(</span><span class="n">fallecidos_edad</span><span class="p">[</span><span class="s1">&#39;edad&#39;</span><span class="p">])</span>
@@ -14391,7 +14391,7 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[21]:</div>
+    <div class="prompt output_prompt">Out[47]:</div>
 
 
 
@@ -14438,7 +14438,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[48]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_DA</span><span class="p">[</span><span class="s1">&#39;sexo&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data_DA</span><span class="p">[</span><span class="s1">&#39;sexo&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;f&#39;</span><span class="p">,</span><span class="s1">&#39;F&#39;</span><span class="p">)</span>
@@ -14452,7 +14452,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[49]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sexo_F</span> <span class="o">=</span> <span class="n">data_DA</span><span class="p">[</span><span class="n">data_DA</span><span class="p">[</span><span class="s1">&#39;sexo&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">]</span>
@@ -14466,7 +14466,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[50]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_sexo_confirmados</span><span class="o">=</span> <span class="n">data_DA</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;sexo&quot;</span><span class="p">])[</span><span class="s2">&quot;id_de_caso&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
@@ -14480,7 +14480,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[51]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_sex_conf</span> <span class="o">=</span> <span class="n">data_sexo_confirmados</span><span class="o">.</span><span class="n">T</span>
@@ -14494,7 +14494,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[53]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -14528,7 +14528,7 @@ div#notebook {
 <pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-26-a3a1eaa632c4&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">&lt;ipython-input-53-a3a1eaa632c4&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-intense-fg ansi-bold">      8</span> fig <span class="ansi-blue-fg">=</span> plt<span class="ansi-blue-fg">.</span>gcf<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">      9</span> fig<span class="ansi-blue-fg">.</span>gca<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>add_artist<span class="ansi-blue-fg">(</span>centre_circle<span class="ansi-blue-fg">)</span>
 <span class="ansi-green-fg">---&gt; 10</span><span class="ansi-red-fg"> </span>ax1<span class="ansi-blue-fg">.</span>axis<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;equal&#39;</span><span class="ansi-blue-fg">)</span>
