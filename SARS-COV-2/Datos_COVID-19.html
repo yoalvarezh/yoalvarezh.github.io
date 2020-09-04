@@ -13124,7 +13124,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">consolidated_files</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span> <span class="c1">##tabla donde se almacenarán los registros</span>
@@ -13139,7 +13139,7 @@ div#notebook {
     <span class="n">consolidated_files</span> <span class="o">=</span> <span class="n">consolidated_files</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">sort</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> <span class="c1">##se agregan los nuevos datos a la tabla sin borrar los anteriores</span>
     <span class="n">length</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">consolidated_files</span><span class="p">)</span> <span class="c1">##se actualiza la cantidad de registros en la tabla para ser evaluada en la próxima iteración</span>
     <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Cargados &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">length</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; registros&#39;</span><span class="p">)</span> <span class="c1">##validador en pantalla de ejecución</span>
+    <span class="c1">#print(&#39;Cargados &#39; + str(length) + &#39; registros&#39;) ##validador en pantalla de ejecución</span>
 <span class="k">del</span> <span class="n">df</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Cargue completado: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">length</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; registros&#39;</span><span class="p">)</span> <span class="c1">##validar finalización del cargue de los registros</span>
 <span class="n">consolidated_files</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;..\Datos\CasosPositivosCOVID19_Colombia.csv&#39;</span><span class="p">)</span>
@@ -13159,332 +13159,7 @@ div#notebook {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Cargados 1000 registros
-Cargados 2000 registros
-Cargados 3000 registros
-Cargados 4000 registros
-Cargados 5000 registros
-Cargados 6000 registros
-Cargados 7000 registros
-Cargados 8000 registros
-Cargados 9000 registros
-Cargados 10000 registros
-Cargados 11000 registros
-Cargados 12000 registros
-Cargados 13000 registros
-Cargados 14000 registros
-Cargados 15000 registros
-Cargados 16000 registros
-Cargados 17000 registros
-Cargados 18000 registros
-Cargados 19000 registros
-Cargados 20000 registros
-Cargados 21000 registros
-Cargados 22000 registros
-Cargados 23000 registros
-Cargados 24000 registros
-Cargados 25000 registros
-Cargados 26000 registros
-Cargados 27000 registros
-Cargados 28000 registros
-Cargados 29000 registros
-Cargados 30000 registros
-Cargados 31000 registros
-Cargados 32000 registros
-Cargados 33000 registros
-Cargados 34000 registros
-Cargados 35000 registros
-Cargados 36000 registros
-Cargados 37000 registros
-Cargados 38000 registros
-Cargados 39000 registros
-Cargados 40000 registros
-Cargados 41000 registros
-Cargados 42000 registros
-Cargados 43000 registros
-Cargados 44000 registros
-Cargados 45000 registros
-Cargados 46000 registros
-Cargados 47000 registros
-Cargados 48000 registros
-Cargados 49000 registros
-Cargados 50000 registros
-Cargados 51000 registros
-Cargados 52000 registros
-Cargados 53000 registros
-Cargados 54000 registros
-Cargados 55000 registros
-Cargados 56000 registros
-Cargados 57000 registros
-Cargados 58000 registros
-Cargados 59000 registros
-Cargados 60000 registros
-Cargados 61000 registros
-Cargados 62000 registros
-Cargados 63000 registros
-Cargados 64000 registros
-Cargados 65000 registros
-Cargados 66000 registros
-Cargados 67000 registros
-Cargados 68000 registros
-Cargados 69000 registros
-Cargados 70000 registros
-Cargados 71000 registros
-Cargados 72000 registros
-Cargados 73000 registros
-Cargados 74000 registros
-Cargados 75000 registros
-Cargados 76000 registros
-Cargados 77000 registros
-Cargados 78000 registros
-Cargados 79000 registros
-Cargados 80000 registros
-Cargados 81000 registros
-Cargados 82000 registros
-Cargados 83000 registros
-Cargados 84000 registros
-Cargados 85000 registros
-Cargados 86000 registros
-Cargados 87000 registros
-Cargados 88000 registros
-Cargados 89000 registros
-Cargados 90000 registros
-Cargados 91000 registros
-Cargados 92000 registros
-Cargados 93000 registros
-Cargados 94000 registros
-Cargados 95000 registros
-Cargados 96000 registros
-Cargados 97000 registros
-Cargados 98000 registros
-Cargados 99000 registros
-Cargados 100000 registros
-Cargados 101000 registros
-Cargados 102000 registros
-Cargados 103000 registros
-Cargados 104000 registros
-Cargados 105000 registros
-Cargados 106000 registros
-Cargados 107000 registros
-Cargados 108000 registros
-Cargados 109000 registros
-Cargados 110000 registros
-Cargados 111000 registros
-Cargados 112000 registros
-Cargados 113000 registros
-Cargados 114000 registros
-Cargados 115000 registros
-Cargados 116000 registros
-Cargados 117000 registros
-Cargados 118000 registros
-Cargados 119000 registros
-Cargados 120000 registros
-Cargados 121000 registros
-Cargados 122000 registros
-Cargados 123000 registros
-Cargados 124000 registros
-Cargados 125000 registros
-Cargados 126000 registros
-Cargados 127000 registros
-Cargados 128000 registros
-Cargados 129000 registros
-Cargados 130000 registros
-Cargados 131000 registros
-Cargados 132000 registros
-Cargados 133000 registros
-Cargados 134000 registros
-Cargados 135000 registros
-Cargados 136000 registros
-Cargados 137000 registros
-Cargados 138000 registros
-Cargados 139000 registros
-Cargados 140000 registros
-Cargados 141000 registros
-Cargados 142000 registros
-Cargados 143000 registros
-Cargados 144000 registros
-Cargados 145000 registros
-Cargados 146000 registros
-Cargados 147000 registros
-Cargados 148000 registros
-Cargados 149000 registros
-Cargados 150000 registros
-Cargados 151000 registros
-Cargados 152000 registros
-Cargados 153000 registros
-Cargados 154000 registros
-Cargados 155000 registros
-Cargados 156000 registros
-Cargados 157000 registros
-Cargados 158000 registros
-Cargados 159000 registros
-Cargados 160000 registros
-Cargados 161000 registros
-Cargados 162000 registros
-Cargados 163000 registros
-Cargados 164000 registros
-Cargados 165000 registros
-Cargados 166000 registros
-Cargados 167000 registros
-Cargados 168000 registros
-Cargados 169000 registros
-Cargados 170000 registros
-Cargados 171000 registros
-Cargados 172000 registros
-Cargados 173000 registros
-Cargados 174000 registros
-Cargados 175000 registros
-Cargados 176000 registros
-Cargados 177000 registros
-Cargados 178000 registros
-Cargados 179000 registros
-Cargados 180000 registros
-Cargados 181000 registros
-Cargados 182000 registros
-Cargados 183000 registros
-Cargados 184000 registros
-Cargados 185000 registros
-Cargados 186000 registros
-Cargados 187000 registros
-Cargados 188000 registros
-Cargados 189000 registros
-Cargados 190000 registros
-Cargados 191000 registros
-Cargados 192000 registros
-Cargados 193000 registros
-Cargados 194000 registros
-Cargados 195000 registros
-Cargados 196000 registros
-Cargados 197000 registros
-Cargados 198000 registros
-Cargados 199000 registros
-Cargados 200000 registros
-Cargados 201000 registros
-Cargados 202000 registros
-Cargados 203000 registros
-Cargados 204000 registros
-Cargados 205000 registros
-Cargados 206000 registros
-Cargados 207000 registros
-Cargados 208000 registros
-Cargados 209000 registros
-Cargados 210000 registros
-Cargados 211000 registros
-Cargados 212000 registros
-Cargados 213000 registros
-Cargados 214000 registros
-Cargados 215000 registros
-Cargados 216000 registros
-Cargados 217000 registros
-Cargados 218000 registros
-Cargados 219000 registros
-Cargados 220000 registros
-Cargados 221000 registros
-Cargados 222000 registros
-Cargados 223000 registros
-Cargados 224000 registros
-Cargados 225000 registros
-Cargados 226000 registros
-Cargados 227000 registros
-Cargados 228000 registros
-Cargados 229000 registros
-Cargados 230000 registros
-Cargados 231000 registros
-Cargados 232000 registros
-Cargados 233000 registros
-Cargados 234000 registros
-Cargados 235000 registros
-Cargados 236000 registros
-Cargados 237000 registros
-Cargados 238000 registros
-Cargados 239000 registros
-Cargados 240000 registros
-Cargados 241000 registros
-Cargados 242000 registros
-Cargados 243000 registros
-Cargados 244000 registros
-Cargados 245000 registros
-Cargados 246000 registros
-Cargados 247000 registros
-Cargados 248000 registros
-Cargados 249000 registros
-Cargados 250000 registros
-Cargados 251000 registros
-Cargados 252000 registros
-Cargados 253000 registros
-Cargados 254000 registros
-Cargados 255000 registros
-Cargados 256000 registros
-Cargados 257000 registros
-Cargados 258000 registros
-Cargados 259000 registros
-Cargados 260000 registros
-Cargados 261000 registros
-Cargados 262000 registros
-Cargados 263000 registros
-Cargados 264000 registros
-Cargados 265000 registros
-Cargados 266000 registros
-Cargados 267000 registros
-Cargados 268000 registros
-Cargados 269000 registros
-Cargados 270000 registros
-Cargados 271000 registros
-Cargados 272000 registros
-Cargados 273000 registros
-Cargados 274000 registros
-Cargados 275000 registros
-Cargados 276000 registros
-Cargados 277000 registros
-Cargados 278000 registros
-Cargados 279000 registros
-Cargados 280000 registros
-Cargados 281000 registros
-Cargados 282000 registros
-Cargados 283000 registros
-Cargados 284000 registros
-Cargados 285000 registros
-Cargados 286000 registros
-Cargados 287000 registros
-Cargados 288000 registros
-Cargados 289000 registros
-Cargados 290000 registros
-Cargados 291000 registros
-Cargados 292000 registros
-Cargados 293000 registros
-Cargados 294000 registros
-Cargados 295000 registros
-Cargados 296000 registros
-Cargados 297000 registros
-Cargados 298000 registros
-Cargados 299000 registros
-Cargados 300000 registros
-Cargados 301000 registros
-Cargados 302000 registros
-Cargados 303000 registros
-Cargados 304000 registros
-Cargados 305000 registros
-Cargados 306000 registros
-Cargados 307000 registros
-Cargados 308000 registros
-Cargados 309000 registros
-Cargados 310000 registros
-Cargados 311000 registros
-Cargados 312000 registros
-Cargados 313000 registros
-Cargados 314000 registros
-Cargados 315000 registros
-Cargados 316000 registros
-Cargados 317000 registros
-Cargados 318000 registros
-Cargados 319000 registros
-Cargados 320000 registros
-Cargados 321000 registros
-Cargados 322000 registros
-Cargados 323000 registros
-Cargados 324000 registros
-Cargados 325000 registros
-Cargados 326000 registros
+<pre>Cargue completado: 633339 registros
 </pre>
 </div>
 </div>
@@ -13518,7 +13193,7 @@ Cargados 326000 registros
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">consolidated_files</span><span class="p">[</span><span class="s1">&#39;fecha_recuperado&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">consolidated_files</span><span class="p">[</span><span class="s1">&#39;fecha_recuperado&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">tz_localize</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span> <span class="c1">## Se cambia el tipo de dato de objeto a datatime</span>
@@ -13533,7 +13208,7 @@ Cargados 326000 registros
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_filtrada_ciudades</span> <span class="o">=</span> <span class="n">consolidated_files</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">consolidated_files</span><span class="p">[</span><span class="s1">&#39;ciudad_de_ubicaci_n&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="s1">&#39;Medellín&#39;</span><span class="p">,</span><span class="s1">&#39;Bogotá D.C.&#39;</span><span class="p">,</span><span class="s1">&#39;Cali&#39;</span><span class="p">,</span><span class="s1">&#39;Barranquilla&#39;</span><span class="p">,</span><span class="s1">&#39;Cartagena de Indias&#39;</span><span class="p">])]</span>
@@ -13550,7 +13225,7 @@ Cargados 326000 registros
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[6]:</div>
+    <div class="prompt output_prompt">Out[5]:</div>
 
 
 
@@ -13882,7 +13557,7 @@ Cargados 326000 registros
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_confirmados</span> <span class="o">=</span> <span class="n">data_filtrada_ciudades</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">data_filtrada_ciudades</span><span class="p">[</span><span class="s1">&#39;atenci_n&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="s1">&#39;Fallecido&#39;</span><span class="p">,</span><span class="s1">&#39;Recuperado&#39;</span><span class="p">,</span><span class="s1">&#39;Casa&#39;</span><span class="p">,</span><span class="s1">&#39;Hospital&#39;</span><span class="p">,</span><span class="s1">&#39;N/A&#39;</span><span class="p">,</span><span class="s1">&#39;Hospital UCI&#39;</span><span class="p">])]</span> <span class="c1">## se filtra la columna atenci_n </span>
@@ -13895,7 +13570,7 @@ Cargados 326000 registros
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_confirmados</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;all&#39;</span><span class="p">,</span> <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>  <span class="c1">## Se eliminan los vacíos</span>
@@ -13912,7 +13587,7 @@ Cargados 326000 registros
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[8]:</div>
+    <div class="prompt output_prompt">Out[7]:</div>
 
 
 
@@ -14237,7 +13912,7 @@ Cargados 326000 registros
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_1</span> <span class="o">=</span> <span class="n">data_confirmados</span><span class="p">[[</span><span class="s1">&#39;fecha_reporte_web&#39;</span><span class="p">,</span><span class="s1">&#39;ciudad_de_ubicaci_n&#39;</span><span class="p">]]</span> 
@@ -14254,7 +13929,7 @@ Cargados 326000 registros
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[9]:</div>
+    <div class="prompt output_prompt">Out[8]:</div>
 
 
 
@@ -14351,7 +14026,7 @@ Cargados 326000 registros
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">dataset_confirmados</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;conteo_confirmados&#39;</span> <span class="p">:</span> <span class="n">data_1</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span> <span class="p">[</span><span class="s1">&#39;fecha_reporte_web&#39;</span><span class="p">,</span><span class="s1">&#39;ciudad_de_ubicaci_n&#39;</span><span class="p">]</span> <span class="p">)</span><span class="o">.</span><span class="n">size</span><span class="p">()})</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
@@ -14368,7 +14043,7 @@ Cargados 326000 registros
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[10]:</div>
+    <div class="prompt output_prompt">Out[9]:</div>
 
 
 
@@ -14484,7 +14159,7 @@ Cargados 326000 registros
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_fallecidos</span> <span class="o">=</span> <span class="n">data_filtrada_ciudades</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">data_filtrada_ciudades</span><span class="p">[</span><span class="s1">&#39;atenci_n&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="s1">&#39;Fallecido&#39;</span><span class="p">])]</span>
@@ -14501,7 +14176,7 @@ Cargados 326000 registros
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[11]:</div>
+    <div class="prompt output_prompt">Out[10]:</div>
 
 
 
@@ -14826,7 +14501,7 @@ Cargados 326000 registros
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_fallecidos</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;all&#39;</span><span class="p">,</span> <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>  <span class="c1">## Se eliminan los vacíos</span>
@@ -14839,7 +14514,7 @@ Cargados 326000 registros
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_2</span> <span class="o">=</span> <span class="n">data_fallecidos</span><span class="p">[[</span><span class="s1">&#39;fecha_reporte_web&#39;</span><span class="p">,</span><span class="s1">&#39;ciudad_de_ubicaci_n&#39;</span><span class="p">]]</span> <span class="c1">## Se obtienen las columnas de interés para fallecidos</span>
@@ -14852,7 +14527,7 @@ Cargados 326000 registros
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">dataset_fallecidos</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;conteo_fallecidos&#39;</span> <span class="p">:</span> <span class="n">data_2</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span> <span class="p">[</span><span class="s1">&#39;fecha_reporte_web&#39;</span><span class="p">,</span><span class="s1">&#39;ciudad_de_ubicaci_n&#39;</span><span class="p">]</span> <span class="p">)</span><span class="o">.</span><span class="n">size</span><span class="p">()})</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span><span class="c1">## Se convierte a dataframe, se hace agrupación para fallecidos y se hace el conteo.</span>
@@ -14869,7 +14544,7 @@ Cargados 326000 registros
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[14]:</div>
+    <div class="prompt output_prompt">Out[13]:</div>
 
 
 
@@ -14985,7 +14660,7 @@ Cargados 326000 registros
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_recuperado</span> <span class="o">=</span> <span class="n">data_filtrada_ciudades</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">data_filtrada_ciudades</span><span class="p">[</span><span class="s1">&#39;atenci_n&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="s1">&#39;Recuperado&#39;</span><span class="p">])]</span><span class="c1">## se filtra para obtener los recuperados</span>
@@ -14998,7 +14673,7 @@ Cargados 326000 registros
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_recuperado</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;all&#39;</span><span class="p">,</span> <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span><span class="c1">## Se eliminan los vacíos</span>
@@ -15011,7 +14686,7 @@ Cargados 326000 registros
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_3</span> <span class="o">=</span> <span class="n">data_recuperado</span><span class="p">[[</span><span class="s1">&#39;fecha_reporte_web&#39;</span><span class="p">,</span><span class="s1">&#39;ciudad_de_ubicaci_n&#39;</span><span class="p">]]</span> <span class="c1">## Se obtienen las columnas de interés para recuperados</span>
@@ -15024,7 +14699,7 @@ Cargados 326000 registros
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">dataset_recuperado</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;conteo_recuperado&#39;</span> <span class="p">:</span> <span class="n">data_3</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span> <span class="p">[</span><span class="s1">&#39;fecha_reporte_web&#39;</span><span class="p">,</span><span class="s1">&#39;ciudad_de_ubicaci_n&#39;</span><span class="p">]</span> <span class="p">)</span><span class="o">.</span><span class="n">size</span><span class="p">()})</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span><span class="c1">## Se convierte a dataframe, se hace agrupación para recuperados y se hace el conteo.</span>
@@ -15041,7 +14716,7 @@ Cargados 326000 registros
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[18]:</div>
+    <div class="prompt output_prompt">Out[17]:</div>
 
 
 
@@ -15150,7 +14825,7 @@ Cargados 326000 registros
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_filtrado</span> <span class="o">=</span> <span class="n">data_filtrada_ciudades</span><span class="p">[[</span><span class="s1">&#39;fecha_reporte_web&#39;</span><span class="p">,</span><span class="s1">&#39;ciudad_de_ubicaci_n&#39;</span><span class="p">]]</span> <span class="c1">## Se obtienen las columnas de interés para los joins que se realizarán</span>
@@ -15163,7 +14838,7 @@ Cargados 326000 registros
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_filtrado</span> <span class="o">=</span> <span class="n">df_filtrado</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">()</span> <span class="c1">## Se eliminan los duplicados</span>
@@ -15176,7 +14851,7 @@ Cargados 326000 registros
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">new_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">df_filtrado</span><span class="p">,</span> <span class="n">dataset_confirmados</span><span class="p">,</span>  <span class="n">how</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="n">left_on</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;fecha_reporte_web&#39;</span><span class="p">,</span><span class="s1">&#39;ciudad_de_ubicaci_n&#39;</span><span class="p">],</span> <span class="n">right_on</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;fecha_reporte_web&#39;</span><span class="p">,</span><span class="s1">&#39;ciudad_de_ubicaci_n&#39;</span><span class="p">])</span>
@@ -15190,7 +14865,7 @@ Cargados 326000 registros
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">new_df1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">new_df</span><span class="p">,</span> <span class="n">dataset_fallecidos</span><span class="p">,</span>  <span class="n">how</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="n">left_on</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;fecha_reporte_web&#39;</span><span class="p">,</span><span class="s1">&#39;ciudad_de_ubicaci_n&#39;</span><span class="p">],</span> <span class="n">right_on</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;fecha_reporte_web&#39;</span><span class="p">,</span><span class="s1">&#39;ciudad_de_ubicaci_n&#39;</span><span class="p">])</span>
@@ -15204,7 +14879,7 @@ Cargados 326000 registros
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">new_df2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">new_df1</span><span class="p">,</span> <span class="n">dataset_recuperado</span><span class="p">,</span>  <span class="n">how</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="n">left_on</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;fecha_reporte_web&#39;</span><span class="p">,</span><span class="s1">&#39;ciudad_de_ubicaci_n&#39;</span><span class="p">],</span> <span class="n">right_on</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;fecha_reporte_web&#39;</span><span class="p">,</span><span class="s1">&#39;ciudad_de_ubicaci_n&#39;</span><span class="p">])</span>
@@ -15218,7 +14893,7 @@ Cargados 326000 registros
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">new_df2</span><span class="p">[</span><span class="s1">&#39;conteo_confirmados&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1">## Se llenan con ceros los campos de los conteos los que tienen NaN</span>
@@ -15237,7 +14912,7 @@ Cargados 326000 registros
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[24]:</div>
+    <div class="prompt output_prompt">Out[23]:</div>
 
 
 
@@ -15377,7 +15052,7 @@ Cargados 326000 registros
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_activos</span><span class="o">=</span> <span class="n">data_filtrada_ciudades</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">data_filtrada_ciudades</span><span class="p">[</span><span class="s1">&#39;atenci_n&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="s1">&#39;Casa&#39;</span><span class="p">,</span><span class="s1">&#39;Hospital&#39;</span><span class="p">,</span><span class="s1">&#39;Hospital UCI&#39;</span><span class="p">])]</span> 
@@ -15390,7 +15065,7 @@ Cargados 326000 registros
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_activos</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;all&#39;</span><span class="p">,</span> <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>  <span class="c1">## Se eliminan los vacíos</span>
@@ -15403,7 +15078,7 @@ Cargados 326000 registros
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_4</span> <span class="o">=</span> <span class="n">data_activos</span><span class="p">[[</span><span class="s1">&#39;fecha_reporte_web&#39;</span><span class="p">,</span><span class="s1">&#39;ciudad_de_ubicaci_n&#39;</span><span class="p">]]</span> 
@@ -15416,7 +15091,7 @@ Cargados 326000 registros
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">dataset_activos</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;casos_activos&#39;</span> <span class="p">:</span> <span class="n">data_4</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span> <span class="p">[</span><span class="s1">&#39;fecha_reporte_web&#39;</span><span class="p">,</span><span class="s1">&#39;ciudad_de_ubicaci_n&#39;</span><span class="p">]</span> <span class="p">)</span><span class="o">.</span><span class="n">size</span><span class="p">()})</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
@@ -15433,7 +15108,7 @@ Cargados 326000 registros
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[28]:</div>
+    <div class="prompt output_prompt">Out[27]:</div>
 
 
 
@@ -15542,7 +15217,7 @@ Cargados 326000 registros
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">new_df3</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">new_df2</span><span class="p">,</span> <span class="n">dataset_activos</span><span class="p">,</span>  <span class="n">how</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="n">left_on</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;fecha_reporte_web&#39;</span><span class="p">,</span><span class="s1">&#39;ciudad_de_ubicaci_n&#39;</span><span class="p">],</span> <span class="n">right_on</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;fecha_reporte_web&#39;</span><span class="p">,</span><span class="s1">&#39;ciudad_de_ubicaci_n&#39;</span><span class="p">])</span>
@@ -15555,7 +15230,7 @@ Cargados 326000 registros
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">new_df3</span><span class="p">[</span><span class="s1">&#39;casos_activos&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1">## Se rellenan los NaN con ceros</span>
@@ -15568,7 +15243,7 @@ Cargados 326000 registros
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">new_df3</span><span class="p">[</span><span class="s1">&#39;casos_activos&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mask</span><span class="p">(</span><span class="n">new_df3</span><span class="p">[</span><span class="s1">&#39;casos_activos&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># Se coloca cero si el valor es menor a 0</span>
@@ -15588,7 +15263,7 @@ Cargados 326000 registros
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sum_casos</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">new_df3</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;ciudad_de_ubicaci_n&quot;</span><span class="p">,</span><span class="s2">&quot;fecha_reporte_web&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">agg</span><span class="p">({</span><span class="s2">&quot;conteo_confirmados&quot;</span><span class="p">:</span><span class="s1">&#39;sum&#39;</span><span class="p">,</span><span class="s2">&quot;conteo_recuperado&quot;</span><span class="p">:</span><span class="s1">&#39;sum&#39;</span><span class="p">,</span><span class="s2">&quot;conteo_fallecidos&quot;</span><span class="p">:</span><span class="s1">&#39;sum&#39;</span><span class="p">,</span> <span class="s2">&quot;casos_activos&quot;</span><span class="p">:</span><span class="s2">&quot;sum&quot;</span><span class="p">})</span><span class="o">.</span><span class="n">reset_index</span><span class="p">())</span>
@@ -15605,7 +15280,7 @@ Cargados 326000 registros
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[32]:</div>
+    <div class="prompt output_prompt">Out[31]:</div>
 
 
 
@@ -15750,7 +15425,7 @@ Cargados 326000 registros
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_mde</span> <span class="o">=</span> <span class="n">sum_casos</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">sum_casos</span><span class="p">[</span><span class="s1">&#39;ciudad_de_ubicaci_n&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="s1">&#39;Medellín&#39;</span><span class="p">])]</span> <span class="c1">## Se filtra por ciudad</span>
@@ -15774,7 +15449,7 @@ Cargados 326000 registros
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_mde</span><span class="p">[</span><span class="s1">&#39;acumulado_dia_confirmados&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">data_mde</span><span class="p">[</span><span class="s1">&#39;conteo_confirmados&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">cumsum</span><span class="p">()</span><span class="c1">## Se calcula el acumulado de confirmados</span>
@@ -15797,7 +15472,7 @@ Cargados 326000 registros
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_bgta</span><span class="p">[</span><span class="s1">&#39;acumulado_dia_confirmados&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">data_bgta</span><span class="p">[</span><span class="s1">&#39;conteo_confirmados&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">cumsum</span><span class="p">()</span><span class="c1">## Se calcula el acumulado de confirmados</span>
@@ -15820,7 +15495,7 @@ Cargados 326000 registros
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_cali</span><span class="p">[</span><span class="s1">&#39;acumulado_dia_confirmados&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">data_cali</span><span class="p">[</span><span class="s1">&#39;conteo_confirmados&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">cumsum</span><span class="p">()</span><span class="c1">## Se calcula el acumulado de confirmados</span>
@@ -15843,7 +15518,7 @@ Cargados 326000 registros
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_bquilla</span><span class="p">[</span><span class="s1">&#39;acumulado_dia_confirmados&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">data_bquilla</span><span class="p">[</span><span class="s1">&#39;conteo_confirmados&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">cumsum</span><span class="p">()</span><span class="c1">## Se calcula el acumulado de confirmados</span>
@@ -15866,7 +15541,7 @@ Cargados 326000 registros
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_cart</span><span class="p">[</span><span class="s1">&#39;acumulado_dia_confirmados&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">data_cart</span><span class="p">[</span><span class="s1">&#39;conteo_confirmados&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">cumsum</span><span class="p">()</span><span class="c1">## Se calcula el acumulado de confirmados</span>
@@ -15882,7 +15557,7 @@ Cargados 326000 registros
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_final</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">data_mde</span><span class="p">,</span><span class="n">data_bgta</span><span class="p">,</span><span class="n">data_cali</span><span class="p">,</span><span class="n">data_cart</span><span class="p">,</span><span class="n">data_bquilla</span><span class="p">])</span> <span class="c1">## Se concatenan los dataframe</span>
@@ -15895,210 +15570,14 @@ Cargados 326000 registros
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_final</span><span class="p">[</span><span class="s1">&#39;acumulado_dia_confirmados&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1">## Se rellenan los NaN con ceros</span>
-<span class="n">data_final</span>
+<span class="n">data_final</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;../Datos/data_final.csv&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[40]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>ciudad_de_ubicaci_n</th>
-      <th>fecha_reporte_web</th>
-      <th>conteo_confirmados</th>
-      <th>conteo_recuperado</th>
-      <th>conteo_fallecidos</th>
-      <th>casos_activos</th>
-      <th>acumulado_dia_confirmados</th>
-      <th>acumulado_dia_recuperado</th>
-      <th>acumulado_dia_fallecidos</th>
-      <th>acumulado_dia_activos</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>673</th>
-      <td>Medellín</td>
-      <td>2020-03-09</td>
-      <td>1</td>
-      <td>1.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>1</td>
-      <td>1.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th>674</th>
-      <td>Medellín</td>
-      <td>2020-03-11</td>
-      <td>2</td>
-      <td>2.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>3</td>
-      <td>3.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th>675</th>
-      <td>Medellín</td>
-      <td>2020-03-14</td>
-      <td>2</td>
-      <td>2.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>5</td>
-      <td>5.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th>676</th>
-      <td>Medellín</td>
-      <td>2020-03-15</td>
-      <td>1</td>
-      <td>1.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>6</td>
-      <td>6.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th>677</th>
-      <td>Medellín</td>
-      <td>2020-03-19</td>
-      <td>3</td>
-      <td>3.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>9</td>
-      <td>9.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>157</th>
-      <td>Barranquilla</td>
-      <td>2020-08-29</td>
-      <td>64</td>
-      <td>2.0</td>
-      <td>2.0</td>
-      <td>60.0</td>
-      <td>35983</td>
-      <td>33113.0</td>
-      <td>1620.0</td>
-      <td>1147.0</td>
-    </tr>
-    <tr>
-      <th>158</th>
-      <td>Barranquilla</td>
-      <td>2020-08-30</td>
-      <td>85</td>
-      <td>1.0</td>
-      <td>0.0</td>
-      <td>84.0</td>
-      <td>36068</td>
-      <td>33114.0</td>
-      <td>1620.0</td>
-      <td>1231.0</td>
-    </tr>
-    <tr>
-      <th>159</th>
-      <td>Barranquilla</td>
-      <td>2020-08-31</td>
-      <td>62</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>62.0</td>
-      <td>36130</td>
-      <td>33114.0</td>
-      <td>1620.0</td>
-      <td>1293.0</td>
-    </tr>
-    <tr>
-      <th>160</th>
-      <td>Barranquilla</td>
-      <td>2020-09-01</td>
-      <td>88</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>88.0</td>
-      <td>36218</td>
-      <td>33114.0</td>
-      <td>1620.0</td>
-      <td>1381.0</td>
-    </tr>
-    <tr>
-      <th>161</th>
-      <td>Barranquilla</td>
-      <td>2020-09-02</td>
-      <td>57</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>57.0</td>
-      <td>36275</td>
-      <td>33114.0</td>
-      <td>1620.0</td>
-      <td>1438.0</td>
-    </tr>
-  </tbody>
-</table>
-<p>841 rows × 10 columns</p>
-</div>
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -16112,7 +15591,7 @@ Cargados 326000 registros
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_filtrado2</span> <span class="o">=</span> <span class="n">data_filtrada_ciudades</span><span class="p">[[</span><span class="s1">&#39;fecha_diagnostico&#39;</span><span class="p">,</span><span class="s1">&#39;ciudad_de_ubicaci_n&#39;</span><span class="p">]]</span>
@@ -16125,7 +15604,7 @@ Cargados 326000 registros
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[42]:</div>
+<div class="prompt input_prompt">In&nbsp;[41]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_filtrado2</span><span class="p">[</span><span class="s1">&#39;fecha_diagnostico&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df_filtrado2</span><span class="p">[</span><span class="s1">&#39;fecha_diagnostico&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">tz_localize</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
@@ -16145,7 +15624,7 @@ Cargados 326000 registros
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[43]:</div>
+<div class="prompt input_prompt">In&nbsp;[42]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_activos_FD</span> <span class="o">=</span> <span class="n">data_filtrada_ciudades</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">data_filtrada_ciudades</span><span class="p">[</span><span class="s1">&#39;atenci_n&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="s1">&#39;Fallecido&#39;</span><span class="p">,</span><span class="s1">&#39;Recuperado&#39;</span><span class="p">,</span><span class="s1">&#39;Casa&#39;</span><span class="p">,</span><span class="s1">&#39;Hospital&#39;</span><span class="p">,</span><span class="s1">&#39;N/A&#39;</span><span class="p">,</span><span class="s1">&#39;Hospital UCI&#39;</span><span class="p">])]</span> 
@@ -16163,7 +15642,7 @@ Cargados 326000 registros
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[43]:</div>
+    <div class="prompt output_prompt">Out[42]:</div>
 
 
 
@@ -16272,7 +15751,7 @@ Cargados 326000 registros
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[44]:</div>
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">dataset_activos_FD</span><span class="p">[</span><span class="s1">&#39;fecha_diagnostico&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">dataset_activos_FD</span><span class="p">[</span><span class="s1">&#39;fecha_diagnostico&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">tz_localize</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
@@ -16285,7 +15764,7 @@ Cargados 326000 registros
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[45]:</div>
+<div class="prompt input_prompt">In&nbsp;[44]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">new_df4</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">df_filtrado2</span><span class="p">,</span> <span class="n">dataset_activos_FD</span><span class="p">,</span>  <span class="n">how</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="n">left_on</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;fecha_diagnostico&#39;</span><span class="p">,</span><span class="s1">&#39;ciudad_de_ubicaci_n&#39;</span><span class="p">],</span> <span class="n">right_on</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;fecha_diagnostico&#39;</span><span class="p">,</span><span class="s1">&#39;ciudad_de_ubicaci_n&#39;</span><span class="p">])</span>
@@ -16302,7 +15781,7 @@ Cargados 326000 registros
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[45]:</div>
+    <div class="prompt output_prompt">Out[44]:</div>
 
 
 
@@ -16418,7 +15897,7 @@ Cargados 326000 registros
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[46]:</div>
+<div class="prompt input_prompt">In&nbsp;[45]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_recuperadoFD</span> <span class="o">=</span> <span class="n">data_filtrada_ciudades</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">data_filtrada_ciudades</span><span class="p">[</span><span class="s1">&#39;atenci_n&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="s1">&#39;Recuperado&#39;</span><span class="p">])]</span>
@@ -16437,7 +15916,7 @@ Cargados 326000 registros
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[46]:</div>
+    <div class="prompt output_prompt">Out[45]:</div>
 
 
 
@@ -16553,7 +16032,7 @@ Cargados 326000 registros
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="prompt input_prompt">In&nbsp;[46]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_confirmadosFD</span> <span class="o">=</span> <span class="n">data_filtrada_ciudades</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">data_filtrada_ciudades</span><span class="p">[</span><span class="s1">&#39;atenci_n&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="s1">&#39;Fallecido&#39;</span><span class="p">,</span><span class="s1">&#39;Recuperado&#39;</span><span class="p">,</span><span class="s1">&#39;Casa&#39;</span><span class="p">,</span><span class="s1">&#39;Hospital&#39;</span><span class="p">,</span><span class="s1">&#39;N/A&#39;</span><span class="p">,</span><span class="s1">&#39;Hospital UCI&#39;</span><span class="p">])]</span> 
@@ -16572,7 +16051,7 @@ Cargados 326000 registros
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[47]:</div>
+    <div class="prompt output_prompt">Out[46]:</div>
 
 
 
@@ -16688,7 +16167,7 @@ Cargados 326000 registros
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[48]:</div>
+<div class="prompt input_prompt">In&nbsp;[47]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_fallecidosFD</span> <span class="o">=</span> <span class="n">data_filtrada_ciudades</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">data_filtrada_ciudades</span><span class="p">[</span><span class="s1">&#39;atenci_n&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="s1">&#39;Fallecido&#39;</span><span class="p">])]</span> 
@@ -16707,7 +16186,7 @@ Cargados 326000 registros
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[48]:</div>
+    <div class="prompt output_prompt">Out[47]:</div>
 
 
 
@@ -16816,7 +16295,7 @@ Cargados 326000 registros
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[49]:</div>
+<div class="prompt input_prompt">In&nbsp;[48]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">new_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">dataset_confirmadosFD</span><span class="p">,</span> <span class="n">dataset_recuperadoFD</span><span class="p">,</span>  <span class="n">how</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="n">left_on</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;fecha_diagnostico&#39;</span><span class="p">,</span><span class="s1">&#39;ciudad_de_ubicaci_n&#39;</span><span class="p">],</span> <span class="n">right_on</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;fecha_diagnostico&#39;</span><span class="p">,</span><span class="s1">&#39;ciudad_de_ubicaci_n&#39;</span><span class="p">])</span>
@@ -16831,7 +16310,7 @@ Cargados 326000 registros
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[50]:</div>
+<div class="prompt input_prompt">In&nbsp;[49]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">new_data2</span> <span class="o">=</span> <span class="n">new_data2</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">()</span>
@@ -16845,7 +16324,7 @@ Cargados 326000 registros
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[51]:</div>
+<div class="prompt input_prompt">In&nbsp;[50]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">new_data2</span><span class="p">[</span><span class="s1">&#39;casos_activos_FD&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mask</span><span class="p">(</span><span class="n">new_data2</span><span class="p">[</span><span class="s1">&#39;casos_activos_FD&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -16863,7 +16342,7 @@ Cargados 326000 registros
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[51]:</div>
+    <div class="prompt output_prompt">Out[50]:</div>
 
 
 
@@ -17008,7 +16487,7 @@ Cargados 326000 registros
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[52]:</div>
+<div class="prompt input_prompt">In&nbsp;[51]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_mdeFD</span> <span class="o">=</span> <span class="n">new_data2</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">new_data2</span><span class="p">[</span><span class="s1">&#39;ciudad_de_ubicaci_n&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="s1">&#39;Medellín&#39;</span><span class="p">])]</span> <span class="c1">## Se filtra por ciudad</span>
@@ -17032,7 +16511,7 @@ Cargados 326000 registros
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[53]:</div>
+<div class="prompt input_prompt">In&nbsp;[52]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_mdeFD</span><span class="p">[</span><span class="s1">&#39;acumulado_dia_confirmados&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">data_mdeFD</span><span class="p">[</span><span class="s1">&#39;conteo_confirmados&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">cumsum</span><span class="p">()</span><span class="c1">## Se calcula el acumulado de confirmados</span>
@@ -17055,7 +16534,7 @@ Cargados 326000 registros
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[54]:</div>
+<div class="prompt input_prompt">In&nbsp;[53]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_bgtaFD</span><span class="p">[</span><span class="s1">&#39;acumulado_dia_confirmados&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">data_bgtaFD</span><span class="p">[</span><span class="s1">&#39;conteo_confirmados&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">cumsum</span><span class="p">()</span><span class="c1">## Se calcula el acumulado de confirmados</span>
@@ -17078,7 +16557,7 @@ Cargados 326000 registros
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[55]:</div>
+<div class="prompt input_prompt">In&nbsp;[54]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_caliFD</span><span class="p">[</span><span class="s1">&#39;acumulado_dia_confirmados&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">data_caliFD</span><span class="p">[</span><span class="s1">&#39;conteo_confirmados&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">cumsum</span><span class="p">()</span><span class="c1">## Se calcula el acumulado de confirmados</span>
@@ -17101,7 +16580,7 @@ Cargados 326000 registros
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[56]:</div>
+<div class="prompt input_prompt">In&nbsp;[55]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_bquillaFD</span><span class="p">[</span><span class="s1">&#39;acumulado_dia_confirmados&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">data_bquillaFD</span><span class="p">[</span><span class="s1">&#39;conteo_confirmados&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">cumsum</span><span class="p">()</span><span class="c1">## Se calcula el acumulado de confirmados</span>
@@ -17124,7 +16603,7 @@ Cargados 326000 registros
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[57]:</div>
+<div class="prompt input_prompt">In&nbsp;[56]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_cartFD</span><span class="p">[</span><span class="s1">&#39;acumulado_dia_confirmados&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">data_cartFD</span><span class="p">[</span><span class="s1">&#39;conteo_confirmados&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">cumsum</span><span class="p">()</span><span class="c1">## Se calcula el acumulado de confirmados</span>
@@ -17140,7 +16619,7 @@ Cargados 326000 registros
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[58]:</div>
+<div class="prompt input_prompt">In&nbsp;[57]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_finalFD</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">data_mdeFD</span><span class="p">,</span><span class="n">data_bgtaFD</span><span class="p">,</span><span class="n">data_caliFD</span><span class="p">,</span><span class="n">data_cartFD</span><span class="p">,</span><span class="n">data_bquillaFD</span><span class="p">])</span> <span class="c1">## Se concatenan los dataframe</span>
@@ -17157,7 +16636,7 @@ Cargados 326000 registros
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[58]:</div>
+    <div class="prompt output_prompt">Out[57]:</div>
 
 
 
@@ -17364,7 +16843,7 @@ Cargados 326000 registros
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[59]:</div>
+<div class="prompt input_prompt">In&nbsp;[58]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -17395,7 +16874,7 @@ Cargados 326000 registros
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[60]:</div>
+<div class="prompt input_prompt">In&nbsp;[59]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_filtrada_ciudades</span><span class="p">[</span><span class="s1">&#39;fecha_reporte_web&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">data_filtrada_ciudades</span><span class="p">[</span><span class="s1">&#39;fecha_reporte_web&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">tz_localize</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span> 
@@ -17409,7 +16888,7 @@ Cargados 326000 registros
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[61]:</div>
+<div class="prompt input_prompt">In&nbsp;[60]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_inicio</span> <span class="o">=</span> <span class="n">data_filtrada_ciudades</span><span class="o">.</span><span class="n">groupby</span> <span class="p">([</span><span class="s1">&#39;fecha_reporte_web&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">id_de_caso</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
@@ -17432,7 +16911,7 @@ Cargados 326000 registros
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[62]:</div>
+<div class="prompt input_prompt">In&nbsp;[61]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">bokeh.plotting</span> <span class="kn">import</span> <span class="n">figure</span><span class="p">,</span> <span class="n">output_file</span><span class="p">,</span> <span class="n">show</span>
@@ -17468,7 +16947,7 @@ Cargados 326000 registros
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[62]:</div>
+    <div class="prompt output_prompt">Out[61]:</div>
 
 
 
@@ -17507,7 +16986,7 @@ Cargados 326000 registros
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[63]:</div>
+<div class="prompt input_prompt">In&nbsp;[62]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">casos_confirmados</span> <span class="o">=</span> <span class="n">consolidated_files</span><span class="p">[</span><span class="s1">&#39;id_de_caso&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
@@ -17546,7 +17025,7 @@ Cargados 326000 registros
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[64]:</div>
+<div class="prompt input_prompt">In&nbsp;[63]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">count_gral</span> <span class="o">=</span> <span class="n">consolidated_files</span><span class="p">[[</span><span class="s1">&#39;id_de_caso&#39;</span><span class="p">,</span><span class="s1">&#39;atenci_n&#39;</span><span class="p">]]</span>
@@ -17581,7 +17060,7 @@ Cargados 326000 registros
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[65]:</div>
+<div class="prompt input_prompt">In&nbsp;[64]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;El porcentaje de recuperados es del:&#39;</span><span class="p">,</span> <span class="n">count_rec</span><span class="o">/</span><span class="n">casos_confirmados</span><span class="o">*</span><span class="mi">100</span><span class="p">,</span><span class="s1">&#39;%&#39;</span><span class="p">)</span>
@@ -17619,7 +17098,7 @@ Cargados 326000 registros
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[66]:</div>
+<div class="prompt input_prompt">In&nbsp;[65]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">count_fallecidos</span> <span class="o">=</span> <span class="n">count_gral</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">count_gral</span><span class="p">[</span><span class="s1">&#39;atenci_n&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Fallecido&#39;</span><span class="p">]</span>
@@ -17653,7 +17132,7 @@ Cargados 326000 registros
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[67]:</div>
+<div class="prompt input_prompt">In&nbsp;[66]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;El porcentaje de fallecidos es del:&#39;</span><span class="p">,</span> <span class="n">count_fallecidos</span><span class="o">/</span><span class="n">casos_confirmados</span><span class="o">*</span><span class="mi">100</span><span class="p">,</span><span class="s1">&#39;%&#39;</span><span class="p">)</span>
@@ -17691,7 +17170,7 @@ Cargados 326000 registros
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[68]:</div>
+<div class="prompt input_prompt">In&nbsp;[67]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">conteo</span> <span class="o">=</span> <span class="n">consolidated_files</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;atenci_n&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
@@ -17708,7 +17187,7 @@ Cargados 326000 registros
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[68]:</div>
+    <div class="prompt output_prompt">Out[67]:</div>
 
 
 
@@ -17928,7 +17407,7 @@ Cargados 326000 registros
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[70]:</div>
+<div class="prompt input_prompt">In&nbsp;[68]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">conteo_estado</span> <span class="o">=</span> <span class="n">conteo</span><span class="p">[</span><span class="s1">&#39;id_de_caso&#39;</span><span class="p">]</span>
@@ -17942,7 +17421,7 @@ Cargados 326000 registros
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[71]:</div>
+<div class="prompt input_prompt">In&nbsp;[69]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">conteo_estado</span> <span class="o">=</span> <span class="n">conteo_estado</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;id_de_caso&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
@@ -17959,7 +17438,7 @@ Cargados 326000 registros
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[71]:</div>
+    <div class="prompt output_prompt">Out[69]:</div>
 
 
 
@@ -18043,7 +17522,7 @@ Cargados 326000 registros
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[72]:</div>
+<div class="prompt input_prompt">In&nbsp;[70]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">agr_ciudad</span> <span class="o">=</span> <span class="n">data_filtrada_ciudades</span><span class="o">.</span><span class="n">groupby</span> <span class="p">([</span><span class="s1">&#39;ciudad_de_ubicaci_n&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">id_de_caso</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
@@ -18058,7 +17537,7 @@ Cargados 326000 registros
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[73]:</div>
+<div class="prompt input_prompt">In&nbsp;[71]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">agr_ciudad</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Cantidad&#39;</span><span class="p">]</span>
@@ -18071,7 +17550,7 @@ Cargados 326000 registros
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[74]:</div>
+<div class="prompt input_prompt">In&nbsp;[72]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">agr_ciudad</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s2">&quot;Cantidad&quot;</span><span class="p">,</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">ascending</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> 
@@ -18089,7 +17568,7 @@ Cargados 326000 registros
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[74]:</div>
+    <div class="prompt output_prompt">Out[72]:</div>
 
 
 
@@ -18153,7 +17632,7 @@ Cargados 326000 registros
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[75]:</div>
+<div class="prompt input_prompt">In&nbsp;[73]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">y_label</span> <span class="o">=</span> <span class="n">agr_ciudad</span><span class="p">[[</span><span class="s1">&#39;Cantidad&#39;</span><span class="p">]]</span>
@@ -18217,7 +17696,7 @@ Cargados 326000 registros
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[76]:</div>
+<div class="prompt input_prompt">In&nbsp;[74]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">ax</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">distplot</span><span class="p">(</span><span class="n">consolidated_files</span><span class="p">[</span><span class="s1">&#39;edad&#39;</span><span class="p">])</span>
@@ -18238,7 +17717,7 @@ Cargados 326000 registros
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[76]:</div>
+    <div class="prompt output_prompt">Out[74]:</div>
 
 
 
@@ -18285,7 +17764,7 @@ Cargados 326000 registros
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[77]:</div>
+<div class="prompt input_prompt">In&nbsp;[75]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">fallecidos_edad</span> <span class="o">=</span> <span class="n">consolidated_files</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">consolidated_files</span><span class="p">[</span><span class="s1">&#39;atenci_n&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="s1">&#39;Fallecido&#39;</span><span class="p">])]</span> 
@@ -18298,7 +17777,7 @@ Cargados 326000 registros
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[78]:</div>
+<div class="prompt input_prompt">In&nbsp;[76]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">ax</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">distplot</span><span class="p">(</span><span class="n">fallecidos_edad</span><span class="p">[</span><span class="s1">&#39;edad&#39;</span><span class="p">])</span>
@@ -18319,7 +17798,7 @@ Cargados 326000 registros
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[78]:</div>
+    <div class="prompt output_prompt">Out[76]:</div>
 
 
 
@@ -18366,7 +17845,7 @@ Cargados 326000 registros
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[79]:</div>
+<div class="prompt input_prompt">In&nbsp;[77]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">consolidated_files</span><span class="p">[</span><span class="s1">&#39;sexo&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">consolidated_files</span><span class="p">[</span><span class="s1">&#39;sexo&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;f&#39;</span><span class="p">,</span><span class="s1">&#39;F&#39;</span><span class="p">)</span>
@@ -18380,7 +17859,7 @@ Cargados 326000 registros
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[80]:</div>
+<div class="prompt input_prompt">In&nbsp;[78]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sexo_F</span> <span class="o">=</span> <span class="n">consolidated_files</span><span class="p">[</span><span class="n">consolidated_files</span><span class="p">[</span><span class="s1">&#39;sexo&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">]</span>
@@ -18394,7 +17873,7 @@ Cargados 326000 registros
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[81]:</div>
+<div class="prompt input_prompt">In&nbsp;[79]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_sexo_confirmados</span><span class="o">=</span> <span class="n">consolidated_files</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;sexo&quot;</span><span class="p">])[</span><span class="s2">&quot;id_de_caso&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
@@ -18408,7 +17887,7 @@ Cargados 326000 registros
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[82]:</div>
+<div class="prompt input_prompt">In&nbsp;[80]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_sex_conf</span> <span class="o">=</span> <span class="n">data_sexo_confirmados</span><span class="o">.</span><span class="n">T</span>
@@ -18422,7 +17901,7 @@ Cargados 326000 registros
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[83]:</div>
+<div class="prompt input_prompt">In&nbsp;[81]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sizes</span> <span class="o">=</span> <span class="p">[</span><span class="mi">15</span><span class="p">,</span> <span class="mi">30</span><span class="p">]</span>
