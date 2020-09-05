@@ -13145,9 +13145,338 @@ div#notebook {
 <span class="c1">#consolidated_files.to_csv(r&#39;..\Datos\CasosPositivosCOVID19_Colombia.csv&#39;)</span>
 
 <span class="n">consolidated_files</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;../Datos/CasosPositivosCOVID19_Colombia.csv&quot;</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span> <span class="s1">&#39;,&#39;</span><span class="p">)</span>
+<span class="n">consolidated_files</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[3]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Unnamed: 0</th>
+      <th>id_de_caso</th>
+      <th>fecha_de_notificaci_n</th>
+      <th>c_digo_divipola</th>
+      <th>ciudad_de_ubicaci_n</th>
+      <th>departamento</th>
+      <th>atenci_n</th>
+      <th>edad</th>
+      <th>sexo</th>
+      <th>tipo</th>
+      <th>...</th>
+      <th>fis</th>
+      <th>fecha_diagnostico</th>
+      <th>fecha_recuperado</th>
+      <th>fecha_reporte_web</th>
+      <th>tipo_recuperaci_n</th>
+      <th>codigo_departamento</th>
+      <th>codigo_pais</th>
+      <th>pertenencia_etnica</th>
+      <th>nombre_grupo_etnico</th>
+      <th>fecha_de_muerte</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>1</td>
+      <td>2020-03-02T00:00:00.000</td>
+      <td>11001</td>
+      <td>Bogotá D.C.</td>
+      <td>Bogotá D.C.</td>
+      <td>Recuperado</td>
+      <td>19</td>
+      <td>F</td>
+      <td>Importado</td>
+      <td>...</td>
+      <td>2020-02-27T00:00:00.000</td>
+      <td>2020-03-06T00:00:00.000</td>
+      <td>2020-03-13T00:00:00.000</td>
+      <td>2020-03-06T00:00:00.000</td>
+      <td>PCR</td>
+      <td>11</td>
+      <td>380.0</td>
+      <td>Otro</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>2</td>
+      <td>2020-03-06T00:00:00.000</td>
+      <td>76111</td>
+      <td>Guadalajara de Buga</td>
+      <td>Valle del Cauca</td>
+      <td>Recuperado</td>
+      <td>34</td>
+      <td>M</td>
+      <td>Importado</td>
+      <td>...</td>
+      <td>2020-03-04T00:00:00.000</td>
+      <td>2020-03-09T00:00:00.000</td>
+      <td>2020-03-19T00:00:00.000</td>
+      <td>2020-03-09T00:00:00.000</td>
+      <td>PCR</td>
+      <td>76</td>
+      <td>724.0</td>
+      <td>Otro</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2</td>
+      <td>3</td>
+      <td>2020-03-07T00:00:00.000</td>
+      <td>5001</td>
+      <td>Medellín</td>
+      <td>Antioquia</td>
+      <td>Recuperado</td>
+      <td>50</td>
+      <td>F</td>
+      <td>Importado</td>
+      <td>...</td>
+      <td>2020-02-29T00:00:00.000</td>
+      <td>2020-03-09T00:00:00.000</td>
+      <td>2020-03-15T00:00:00.000</td>
+      <td>2020-03-09T00:00:00.000</td>
+      <td>PCR</td>
+      <td>5</td>
+      <td>724.0</td>
+      <td>Otro</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>3</td>
+      <td>4</td>
+      <td>2020-03-09T00:00:00.000</td>
+      <td>5001</td>
+      <td>Medellín</td>
+      <td>Antioquia</td>
+      <td>Recuperado</td>
+      <td>55</td>
+      <td>M</td>
+      <td>Relacionado</td>
+      <td>...</td>
+      <td>2020-03-06T00:00:00.000</td>
+      <td>2020-03-11T00:00:00.000</td>
+      <td>2020-03-26T00:00:00.000</td>
+      <td>2020-03-11T00:00:00.000</td>
+      <td>PCR</td>
+      <td>5</td>
+      <td>NaN</td>
+      <td>Otro</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>4</td>
+      <td>5</td>
+      <td>2020-03-09T00:00:00.000</td>
+      <td>5001</td>
+      <td>Medellín</td>
+      <td>Antioquia</td>
+      <td>Recuperado</td>
+      <td>25</td>
+      <td>M</td>
+      <td>Relacionado</td>
+      <td>...</td>
+      <td>2020-03-08T00:00:00.000</td>
+      <td>2020-03-11T00:00:00.000</td>
+      <td>2020-03-23T00:00:00.000</td>
+      <td>2020-03-11T00:00:00.000</td>
+      <td>PCR</td>
+      <td>5</td>
+      <td>NaN</td>
+      <td>Otro</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>513714</th>
+      <td>714</td>
+      <td>513755</td>
+      <td>2020-08-09T00:00:00.000</td>
+      <td>20001</td>
+      <td>Valledupar</td>
+      <td>Cesar</td>
+      <td>Casa</td>
+      <td>7</td>
+      <td>M</td>
+      <td>En estudio</td>
+      <td>...</td>
+      <td>2020-08-05T00:00:00.000</td>
+      <td>2020-08-20T00:00:00.000</td>
+      <td>NaN</td>
+      <td>2020-08-20T00:00:00.000</td>
+      <td>NaN</td>
+      <td>20</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>513715</th>
+      <td>715</td>
+      <td>513756</td>
+      <td>2020-08-09T00:00:00.000</td>
+      <td>20001</td>
+      <td>Valledupar</td>
+      <td>Cesar</td>
+      <td>Casa</td>
+      <td>24</td>
+      <td>M</td>
+      <td>En estudio</td>
+      <td>...</td>
+      <td>2020-08-05T00:00:00.000</td>
+      <td>2020-08-20T00:00:00.000</td>
+      <td>NaN</td>
+      <td>2020-08-20T00:00:00.000</td>
+      <td>NaN</td>
+      <td>20</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>513716</th>
+      <td>716</td>
+      <td>513757</td>
+      <td>2020-08-09T00:00:00.000</td>
+      <td>44001</td>
+      <td>Riohacha</td>
+      <td>La Guajira</td>
+      <td>Casa</td>
+      <td>31</td>
+      <td>F</td>
+      <td>En estudio</td>
+      <td>...</td>
+      <td>2020-08-06T00:00:00.000</td>
+      <td>2020-08-20T00:00:00.000</td>
+      <td>NaN</td>
+      <td>2020-08-20T00:00:00.000</td>
+      <td>NaN</td>
+      <td>44</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>513717</th>
+      <td>717</td>
+      <td>513758</td>
+      <td>2020-08-09T00:00:00.000</td>
+      <td>50001</td>
+      <td>Villavicencio</td>
+      <td>Meta</td>
+      <td>Casa</td>
+      <td>53</td>
+      <td>M</td>
+      <td>En estudio</td>
+      <td>...</td>
+      <td>2020-08-02T00:00:00.000</td>
+      <td>2020-08-20T00:00:00.000</td>
+      <td>NaN</td>
+      <td>2020-08-20T00:00:00.000</td>
+      <td>NaN</td>
+      <td>50</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>513718</th>
+      <td>718</td>
+      <td>513759</td>
+      <td>2020-08-09T00:00:00.000</td>
+      <td>73001</td>
+      <td>Ibagué</td>
+      <td>Tolima</td>
+      <td>Casa</td>
+      <td>33</td>
+      <td>M</td>
+      <td>En estudio</td>
+      <td>...</td>
+      <td>2020-08-06T00:00:00.000</td>
+      <td>2020-08-20T00:00:00.000</td>
+      <td>NaN</td>
+      <td>2020-08-20T00:00:00.000</td>
+      <td>NaN</td>
+      <td>73</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+<p>513719 rows × 22 columns</p>
+</div>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -17876,7 +18205,7 @@ div#notebook {
 <span class="n">centre_circle</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">Circle</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span><span class="mf">0.70</span><span class="p">,</span><span class="n">fc</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">)</span>
 <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gcf</span><span class="p">()</span>
 <span class="n">fig</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">add_artist</span><span class="p">(</span><span class="n">centre_circle</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>  
+<span class="n">ax</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
@@ -17898,7 +18227,7 @@ div#notebook {
 <pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">ValueError</span>                                Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-81-131b39bf2b9a&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">&lt;ipython-input-81-4c0d1d3d9099&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-intense-fg ansi-bold">      2</span> colors <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#39;salmon&#39;</span><span class="ansi-blue-fg">,</span><span class="ansi-blue-fg">&#39;lightseagreen&#39;</span><span class="ansi-blue-fg">]</span>
 <span class="ansi-green-intense-fg ansi-bold">      3</span> explode <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">0.05</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">0.05</span><span class="ansi-blue-fg">)</span>
 <span class="ansi-green-fg">----&gt; 4</span><span class="ansi-red-fg"> </span>plt<span class="ansi-blue-fg">.</span>pie<span class="ansi-blue-fg">(</span>data_sexo_confirmados<span class="ansi-blue-fg">,</span> labels<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#39;Femenino&#39;</span><span class="ansi-blue-fg">,</span><span class="ansi-blue-fg">&#39;Masculino&#39;</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span>colors <span class="ansi-blue-fg">=</span> colors<span class="ansi-blue-fg">,</span>autopct<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">&#39;%1.1f%%&#39;</span><span class="ansi-blue-fg">,</span>startangle<span class="ansi-blue-fg">=</span><span class="ansi-cyan-fg">90</span><span class="ansi-blue-fg">,</span> pctdistance<span class="ansi-blue-fg">=</span><span class="ansi-cyan-fg">0.85</span><span class="ansi-blue-fg">,</span> explode <span class="ansi-blue-fg">=</span> explode<span class="ansi-blue-fg">)</span>
