@@ -105,7 +105,7 @@
         <p>Para modelar el corto plazo de los casos (20 días a partir de la última fecha real) se usa un modelo ARIMA, donde se obtiene como resultado una serie de tiempo que interpreta el comportamiento exponencial del virus. Es de aclarar que este modelo no tiene en cuenta la restricción que representa la población total, por lo que en corto plazo presenta resultados correctos, pero al largo plazo seguirá creciendo, asumiendo una población infinita. Por este motivo el modelo necesitará una corrección basada en el modelo SIR.</p>
         <p>Antes de correr el modelo se debe estacionalizar la serie de tiempo ya que la media móvil y la desviación estándar deben ser constantes para posteriormente realizar el pronóstico en el horizonte de tiempo deseado.</p>
 
-        SIR
+        <H2>SIR</h2>
         <p>Al tratarse de datos epidemiológicos se usa también el modelo SIR debido a su capacidad de representar características típicas de un brote epidémico. En este modelo existen los siguientes grupos:</p>
         
         <li>Población susceptible (S): es la cantidad de individuos que son susceptibles de ser infectados. Inicialmente será la cantidad total de población en una ciudad específica y se verá reducida a lo largo del tiempo en función de la cantidad de infectados.</li>
