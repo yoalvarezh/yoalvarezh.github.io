@@ -11,7 +11,7 @@ body
 p
 { margin: 0px;
   padding: 0px 0px 16px 0px;
-  line-height: 1.7em;}
+  line-height: 1.5em;}
 
 h1, h2, h3, h4
 { font-size: 150%;
@@ -24,8 +24,7 @@ h1, h2, h3, h4
 h1, h3
 { text-transform: uppercase;
   margin: 10px 0px 20px 0px;
-  padding: 5px 20px 5px 0px;
-  border-bottom: 1px solid #CCC6B4;}
+  padding: 5px 20px 5px 0px;}
 
 a, a:hover
 { border-bottom: 1px dotted;

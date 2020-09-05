@@ -50,8 +50,101 @@
       
       <div id="content">
         <!-- insert the page content here -->
-        <h1>Metodología</h1>
-        <p>kvdjndskjvbkjdvb</p>
+        <h2>METODOLOGÍA</h2>
+        
+        <h2>DEFINICIÓN DEL PROBLEMA REAL:</h2>
+        <p>Se busca saber cuál será el comportamiento futuro del COVID-19 en las 5 ciudades principales de Colombia: Bogotá, Medellín, Cali, Barranquilla y Cartagena.</p>
+        
+        <h2>DEFINICIÓN DEL PROBLEMA DE ANALÍTICA:</h2>
+        <p>Planteamiento de un modelo predictivo que explique el comportamiento futuro, en el corto y mediano plazo, del COVID-19 en las 5 ciudades principales de Colombia y entregar un producto de datos que sirva de insumo a las entidades responsables de tomar decisiones en materia de salud durante la pandemia.<p>
+
+
+        <h2>OBTENCIÓN DE LOS DATOS:</h2>
+        <p>La fase exploratoria de los datos y los modelos de predicción de COVID-19 en Colombia se realiza con los datos encontrados en la siguiente página del Gobierno:
+        <a href="https://www.datos.gov.co/Salud-y-Protecci-n-Social/Casos-positivos-de-COVID-19-en-Colombia/gt2j-8ykr/data">“https://www.datos.gov.co/Salud-y-Protecci-n-Social/Casos-positivos-de-COVID-19-en-Colombia/gt2j-8ykr/data”</a></p>
+        
+        <p>Para obtener los datos en un proceso automático se hace uso del lenguaje Python y de la API proporcionada en la página anterior para que en un proceso iterativo (loop while) se extraigan 1.000 registros por paso (máximo permitido por la API al tiempo) hasta completar todos los registros. Una vez completado el cargue de los datos, el dataframe resultante se guarda en un archivo con extensión .csv que será el insumo en los pasos posteriores.</p>
+
+
+        <h2>ENTENDIMIENTO DE LOS DATOS</h2>
+
+        <p>Luego de tener los datos se pasa a la fase de entendimiento de los mismos, importante para saber qué variables harán parte de los modelos predictivos y tener un entendimiento general del comportamiento del virus en Colombia.  En esta fase se usa lenguaje Python.</p>
+        
+        <P>Se logra identificar lo siguiente:</P>
+
+
+        <li>Las 5 ciudades principales del país son a su vez las 5 ciudades con mayor cantidad de casos reportados, evidenciando la necesidad de entender el comportamiento futuro del virus en estas zonas particulares.</li>
+        <p></p>
+        <li>El número de casos nuevos por día tiene un comportamiento exponencial hasta finales de julio, en agosto los casos nuevos por día comienzan a decrecer, esto será importante al momento de escoger los posibles modelos de predicción a utilizar.</li>
+        <p></p>
+        <li>Es necesario que los datos sean actualizados una vez al día de manera completa y no incremental, debido a la dificultad que plantearía tener que identificar los casos donde el estado de la persona cambie (por ejemplo, cuando se pasa de estar en el hospital a estar recuperado).</li>
+        <p></p>
+        <li>El estado “recuperado” es el que más se repite en los registros, representando alrededor del 75% de los registros. Mientras que el estado “fallecido” el 3% aproximadamente.</li>
+        <p></p>
+        <li>Dos histogramas basados en la edad muestran que la población joven (entre los 20-40 años) es la más susceptible de contagiarse mientras que la población mayor (entre los 60-80 años) es la más susceptible de fallecer a causa del virus. Se puede concluir que la población joven es el medio por el cual se transmite el virus.</li>
+        <p></p>
+        <li>El sexo no es un variable significativa dentro del análisis ya que tanto hombres como mujeres guardan proporciones muy parecidas (mujeres 48,6% y hombres 51,4%)</li>
+        
+
+        <p></p>
+        <h2>PREPARACIÓN DE LOS DATOS</h2>
+        <p>En esta fase se cubren las actividades necesarias para construir el conjunto final de datos que se usa junto con las herramientas de modelado. En este caso solo se filtran los registros que fueron reportados en las 5 ciudades mencionadas con anterioridad.</p>
+        <p>A partir de la revisión de los datos se define que los campos a utilizar para predecir la cantidad de nuevos casos, fallecidos y recuperados serán:</p>
+
+        <li>ID de caso: número único (clave) que identifica el caso.</li>
+        <li>Fecha de reporte web: entendido como la fecha en que el registro del Instituto Nacional de Salud es visible para todos los usuarios de la página web y la API. Con este dato se identifican los casos nuevos por día.</li>
+        <li>Ciudad de ubicación: ciudad donde reside la persona que tiene o tuvo el virus.</li>
+        <li>Atención: indica el último estado registrado de la persona (en este caso se usarán los estados “recuperado” y “fallecido”.</li>
+
+        <p></p>
+        <p>Se eligen estos para crear una tabla que resuma por fecha y ciudad la cantidad de casos confirmados (corresponde a la cantidad de personas con el virus y se calcula como el conteo de los casos presentados en un día específico independientemente de su valor en el campo “atención”), la cantidad de casos recuperados (conteo de casos donde el campo “atención” tiene el valor “recuperado”) y la cantidad de fallecidos (conteo de casos donde el campo “atención” tiene el valor “fallecido”). En esta tabla el conteo y los estados son variables o campos, y se adicionan nuevas variables que muestran el valor acumulado por estado y casos.</p>
+        
+        <h2>MODELADO:</h2>
+        <p>En esta fase se seleccionan y aplican las técnicas de modelado que se consideren adecuadas para los datos.</p>
+
+        <h2>ARIMA</h2>
+        <p>Para modelar el corto plazo de los casos (20 días a partir de la última fecha real) se usa un modelo ARIMA, donde se obtiene como resultado una serie de tiempo que interpreta el comportamiento exponencial del virus. Es de aclarar que este modelo no tiene en cuenta la restricción que representa la población total, por lo que en corto plazo presenta resultados correctos, pero al largo plazo seguirá creciendo, asumiendo una población infinita. Por este motivo el modelo necesitará una corrección basada en el modelo SIR.</p>
+        <p>Antes de correr el modelo se debe estacionalizar la serie de tiempo ya que la media móvil y la desviación estándar deben ser constantes para posteriormente realizar el pronóstico en el horizonte de tiempo deseado.</p>
+
+        SIR
+        <p>Al tratarse de datos epidemiológicos se usa también el modelo SIR debido a su capacidad de representar características típicas de un brote epidémico. En este modelo existen los siguientes grupos:</p>
+        
+        <li>Población susceptible (S): es la cantidad de individuos que son susceptibles de ser infectados. Inicialmente será la cantidad total de población en una ciudad específica y se verá reducida a lo largo del tiempo en función de la cantidad de infectados.</li>
+        <li>Población infectada (I): es la cantidad de personas infectadas y que pueden transmitir el virus a individuos de la población susceptible. Se asumirá que una persona puede ser contagiada una única vez.</li>
+        <li>Población recuperada y fallecidos (R): es la cantidad de individuos que son inmunes a la infección o han fallecido y que por lo tanto no pueden transmitir el virus a individuos de la población susceptible.</li>
+
+        <p></p>
+        <p>Para variar la cantidad de las diferentes poblaciones a través del tiempo se hace necesario el cálculo de:</p>
+        
+        <li>Tasa de transmisión, se calcula de la siguiente manera:</li>
+
+        <div class="myImage" id="Cali" style="display:block"> <img src="style/1.png" alt="1"> </div>
+          
+        <li>Tasa de recuperación, se calcula de la siguiente manera:</li>
+
+        <div class="myImage" id="Cali" style="display:block"> <img src="style/2.png" alt="1"> </div>
+          
+        <li>Tasa de muerte, esta se asume constante durante el tiempo y se calcula de la siguiente manera:</li>
+          
+        <div class="myImage" id="Cali" style="display:block"> <img src="style/3.png" alt="1"> </div>
+
+        <p>Este modelo al tener en cuenta el límite que representa la población susceptible en un cualquier brote epidemiológico (ya que la población no es infinita) ayuda a modelar de mejor manera el mediano y largo plazo, sirviendo de complemento para el modelo ARIMA.</p>
+
+        <h2>PONDERACIÓN</h2>
+        <p>Con la finalidad de usar ambos modelos para realizar el pronóstico se realiza una ponderación de los resultados obtenidos, de tal manera que el modelo ARIMA tenga un mayor peso en el corto plazo y el modelo SIR un mayor peso en el mediano y largo plazo. Las ponderaciones se realizan de la siguiente manera:</p>
+          <li>Para los 13 primeros días de pronóstico se usa el 90% del resultado del ARIMA y el 10% del SIR.</li>
+            <li>Para el rango de 14 días a 20 días de pronóstico se usa el 10% del ARIMA y el 90% del SIR.</li>
+              <li>Para 21 o más días de pronóstico se usa el 100% del SIR.</li>
+
+        <p></p>
+        <H2>CONCLUSIONES:</H2>
+        <li>La metodología empleada para el desarrollo del producto de datos de análisis del comportamiento del Covid-19 en las 5 principales ciudades de Colombia, reforzó los conceptos vistos en la asignatura de Analítica Predictiva y permitió su aplicación sobre un caso real como lo es el modelamiento de una epidemia. Adicionalmente, el ciclo de vida del proyecto comprendió las fases de la metodología CRISP-DM y su posterior despliegue en GitHub Pages simulando un entorno de análisis real y permitiendo así el desarrollo de destrezas y habilidades para la recolección, tratamiento, modelamiento y despliegue de un producto de datos.</li>
+        <p></p>
+        <li>Si bien se modeló el comportamiento de la enfermedad mediante el modelo ARIMA y el modelo SIR por separado, al final se ponderó el resultado de los dos modelos ya que el primero es útil para escenarios a corto plazo y el segundo para escenarios a largo plazo. Este proceso tiene la finalidad de empalmar correctamente ambas predicciones.</li>
+        <p></p>
+        <li>En el desarrollo de productos de datos, la automatización de los procesos de ingesta, limpieza, modelado y presentación de resultados nos permite replicar cada una de las etapas sin intervención humana en el momento en que sea requerido.</li>
+              
+              
         
       </div>
     </div>
